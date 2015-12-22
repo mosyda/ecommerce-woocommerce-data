@@ -1,5 +1,5 @@
 web:
-  image: ecommerce-php-55
+  image: seqr-ecommerce-php-55
   ports:
     - "8080:80"
     - "3306:3306"
@@ -9,6 +9,6 @@ web:
   volumes_from:
     - data
 data:
-  image: ps-data
+  image: seqr-prestashop-data
   environment:
     PS_VERSION: '1.6.1.3'
