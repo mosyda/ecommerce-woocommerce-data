@@ -3,7 +3,6 @@ web:
   ports:
     - "8080:80"
     - "3306:3306"
-    - "9000:9000"
   volumes_from:
     - data
 data:
