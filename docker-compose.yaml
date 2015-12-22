@@ -1,0 +1,14 @@
+web:
+  image: ecommerce-php-55
+  ports:
+    - "8080:80"
+    - "3306:3306"
+  expose:
+    - "8080"
+    - "3306"
+  volumes_from:
+    - data
+data:
+  image: ps-data
+  environment:
+    PS_VERSION: '1.6.1.3'
