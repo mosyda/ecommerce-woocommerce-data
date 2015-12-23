@@ -4,5 +4,6 @@ unzip -q /tmp/temp -d /tmp
 cp -rf /tmp/prestashop/* /var/www/html
 rm -rf /tmp/*
 chown -R www-data:www-data /var/www
+chmod -Rf 777 /var/www/html/modules/seqr
 
-while true; do true; done;
+exec /bin/true

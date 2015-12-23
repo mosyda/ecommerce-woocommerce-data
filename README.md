@@ -7,7 +7,7 @@ Mapping local plugin dev directory to the Prestashop data container.
 ```bash  
 export DEV_DIR /home/yourhome/path/to/seqr/plugin
 
-docker-compose up
+docker-compose up -d
 
 ```
 
