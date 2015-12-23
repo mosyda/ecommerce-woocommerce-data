@@ -3,9 +3,12 @@ MAINTAINER Kamil Manka <kamil.manka@seamless.se>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install unzip curl
 
-ADD get_prestashop.sh /get_prestashop.sh
-RUN chmod +x /get_prestashop.sh
+ADD run.sh /run.sh
+RUN chmod +x /run.sh
 RUN mkdir -p /var/www/html
+
+# SEQR plugin directory
+RUN mkdir -p /var/www/html/modules/seqr
 
 # apache config
 ENV APACHE_RUN_USER www-data
@@ -14,4 +17,4 @@ RUN chown -R www-data:www-data /var/www/
 
 VOLUME /var/www/html
 
-CMD ["/get_prestashop.sh"]
+CMD ["/run.sh"]
