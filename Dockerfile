@@ -14,4 +14,4 @@ RUN chown -R www-data:www-data /var/www/
 
 VOLUME /var/www/html
 
-CMD ["/run.sh"]
+ENTRYPOINT ["/run.sh"]

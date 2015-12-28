@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -z "$PS_VERSION"]; then
+if [ -z "$PS_VERSION" ]; then
   echo "Prestashop version not found. Please set up PS_VERSION variable properly."
   exit 1
 fi
@@ -15,4 +15,8 @@ if [ -n "$PLUGIN_NAME" ]; then
   chmod -Rf 777 /var/www/html/modules/$PLUGIN_NAME
 fi
 
-exec /bin/true
+if [ -n "$1" ]; then
+	exec $1
+elseif
+	exec /bin/true
+fi
