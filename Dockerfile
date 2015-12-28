@@ -1,14 +1,11 @@
 FROM ubuntu:14.04
-MAINTAINER Kamil Manka <kamil.manka@seamless.se>
+MAINTAINER Kamil Manka <kamil.manka@gmail.com>
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y install unzip curl
 
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
 RUN mkdir -p /var/www/html
-
-# SEQR plugin directory
-RUN mkdir -p /var/www/html/modules/seqr
 
 # apache config
 ENV APACHE_RUN_USER www-data
