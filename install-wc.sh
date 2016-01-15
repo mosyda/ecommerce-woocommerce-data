@@ -3,11 +3,13 @@
 if [ -z "$1" ]
   then
     echo "First argument should be a wordpress version (at least 3.7). No version supplied"
+    exit 1
 fi
 
 if [ -z "$2" ]
   then
     echo "Second argument should be a wordpress version. No version supplied"
+    exit 1
 fi
 
 # Wait for MySQL
