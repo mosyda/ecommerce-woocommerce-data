@@ -23,4 +23,4 @@ cd /var/www/html
 /var/www/html/wp-cli core install --url=http://localhost:8080/wordpress/ --title=WordPress --admin_user=admin --admin_password=admin123 --admin_email=somefakeemail@fakedomain.com --allow-root
 /var/www/html/wp-cli db query --allow-root "UPDATE wp_options SET option_value='http://localhost:8080' WHERE option_name IN ('siteurl', 'home')"
 
-/var/www/html/wp-cli plugin install woocommerce --activate --version $2
+/var/www/html/wp-cli plugin install woocommerce --activate --allow-root --version $2
