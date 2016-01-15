@@ -1,7 +1,5 @@
 #!/bin/bash
 
-chmod +x /var/www/html/install-wc.sh
-
 curl -O -s https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar
 chmod +x wp-cli.phar
 sudo mv wp-cli.phar /var/www/html/wp-cli
