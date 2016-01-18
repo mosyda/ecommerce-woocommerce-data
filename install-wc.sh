@@ -26,4 +26,4 @@ cd /var/www/html
 /var/www/html/wp-cli db query --allow-root "UPDATE wp_options SET option_value='http://localhost:8080' WHERE option_name IN ('siteurl', 'home')"
 
 /var/www/html/wp-cli plugin install woocommerce --activate --allow-root --version=$2
-/var/www/html/wp-cli plugin activate seqr --allow-root
+/var/www/html/wp-cli plugin activate woocommerce-seqr --allow-root
